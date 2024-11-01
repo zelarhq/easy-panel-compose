@@ -88,7 +88,13 @@ services:
       timeout: 5s
       retries: 10
     restart: always
-
+    
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always  
+    
 volumes:
   docker-data:
   db-data:
